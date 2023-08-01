@@ -36,7 +36,7 @@ testeBooleanos(true, false) */
 
   //Prática 3
 
-  const verificarSePodeVotar = (idade) => {
+/*   const verificarSePodeVotar = (idade) => {
     if(idade >=18 && idade < 70){
         console.log('Voto obrigatório')
      } else if(idade >=16 && idade <18){
@@ -52,4 +52,30 @@ testeBooleanos(true, false) */
     
 }
 
-verificarSePodeVotar(27)
+verificarSePodeVotar(27) */
+
+//Prática 4 com prompt usando a prática 3 (Sugestão Fayra)
+const anoAtual = 2023
+const anoNascimento = +prompt("Em qual ano você nasceu?")
+const idade = anoAtual - anoNascimento
+
+
+const verificarSePodeVotar = (idade) => {
+    if(idade >=18 && idade < 70){
+        console.log('Voto obrigatório')
+     } else if(idade >=16 && idade <18){
+        console.log('Tem direito ao título de eleitor')
+     } else if (idade >= 70 && idade < 120){
+        console.log('Vote caso queira');
+     } else if (idade < 16) {
+        console.log('Vá assistir dragon ball');
+     } else if (idade >= 120) {
+        console.log('Tem certeza que sua idade é essa? liga pro guiness book ou corrija sua idade');
+     } else {
+        console.log(`Você me enviou um "${anoNascimento}" que significa "Not a Number (Não é um número)". Atualize a página e tente mais uma vez.`)
+     } 
+    
+    
+}
+
+verificarSePodeVotar(idade)
